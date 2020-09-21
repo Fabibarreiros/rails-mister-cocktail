@@ -5,15 +5,29 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
-Ingredient.create(name: "mint")
-Ingredient.create(name: "Rhum")
-Ingredient.create(name: "tequila")
-Ingredient.create(name: "orange juice")
-Ingredient.create(name: "tomato juice")
+puts 'cleaning up database...'
+Ingredient.destroy_all
+puts 'db clean'
 
+puts 'creating ingredients'
+Ingredient.create(name: "limão")
+Ingredient.create(name: "laranja")
+Ingredient.create(name: "menta")
+Ingredient.create(name: "canela")
+Ingredient.create(name: "manga")
+Ingredient.create(name: "água de coco")
+Ingredient.create(name: "uva")
+Ingredient.create(name: "abacaxi")
+Ingredient.create(name: "goiaba")
+Ingredient.create(name: "leite condensado")
+Ingredient.create(name: "hortelã")
+Ingredient.create(name: "cupuaçu")
+Ingredient.create(name: "framboesa")
+Ingredient.create(name: "maracujá")
+Ingredient.create(name: "açucar")
+Ingredient.create(name: "melancia")
+
+puts 'seed finished'
 # url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 # ingredients_serialized = open(url).read ingredients = JSON.parse(ingredients_serialized)
 # ingredients["drinks"].map { |i| i["strIngredient1"] }.each do |ingredient| Ingredient.create!(name: ingredient) end
